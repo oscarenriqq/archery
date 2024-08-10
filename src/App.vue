@@ -5,12 +5,12 @@
       <h1 class="text-6xl font-extrabold text-center">Super arquero</h1>
       <p class="text-center px-5 md:px-0 mt-3">Demuestra tu puntería respondiendo las preguntas y salva a un inocente civil de morir.</p>
     </header>
-    <main class="text-center pt-10">
+    <main class="text-center pt-5 md:pt-10">
       <div class="flex justify-between">
         <img :src="Arrow" class="w-20 h-20" id="arrow" />
         <img :src="Body" class="w-20 h-20" />
       </div>
-      <div class="mt-5">
+      <div class="md:mt-5">
         <Notification v-if="hits == hitsToWin" @new-game="newGame" message="¡Has Ganado!" :winner="true"  />
         <Notification v-else-if="missedAttempts == attemptsToLose" @new-game="newGame" message="Perdiste :(" :winner="false"   />
         <Question v-else :hits="hits" :hits-to-win="hitsToWin" @missed-attempt="missedAttempt" @increment-hit="incrementHit" />
