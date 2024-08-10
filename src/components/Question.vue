@@ -9,7 +9,7 @@
             <input 
                 type="text"
                 v-model="answer"
-                class="w-1/2 h-10 border-2 rounded-md outline-none text-center font-extrabold"
+                class="w-72 md:w-1/2 h-10 border-2 rounded-md outline-none text-center font-extrabold"
                 placeholder="Ingresa tu respuesta"
                 required
             />
