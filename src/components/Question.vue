@@ -2,9 +2,9 @@
     <div>
         <form @submit="handleSubmit" class="flex flex-col items-center">
             <p class="md:text-xl font-extrabold mt-10"> Pista: {{ question.pista }} </p>
-            <div class="w-1/2 flex justify-between mt-5 px-1">
+            <div class="w-1/2 flex flex-col gap-2 md:flex-row md:justify-between md:gap-0 mt-5 px-1">
                 <span class="font-extrabold">La palabra tiene {{ `${question.palabra.length} letras` }}</span>
-                <span v-if="answer.length > 0" class="font-extrabold">{{ answer.length }}</span>
+                <span v-if="answer.length > 0" class="text-sm font-extrabold">{{ answer.length }}</span>
             </div>
             <input 
                 type="text"
@@ -13,8 +13,8 @@
                 placeholder="Ingresa tu respuesta"
                 required
             />
-            <span class="font-extrabold mt-2">{{ hits }} / {{ hitsToWin }}</span>
-            <button type="submit" class="mt-5 bg-black w-40 h-10 rounded-lg text-white font-extrabold"> Verificar </button>
+            <span class="font-extrabold mt-5">{{ hits }} / {{ hitsToWin }}</span>
+            <button type="submit" class="bg-black w-40 h-10 rounded-lg text-white font-extrabold"> Verificar </button>
         </form>
     </div>
 </template>
