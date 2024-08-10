@@ -2,7 +2,7 @@
     <div>
         <form @submit="handleSubmit" class="flex flex-col items-center">
             <p class="md:text-xl font-extrabold mt-10"> Pista: {{ question.pista }} </p>
-            <div class="w-1/2 flex flex-col gap-2 md:flex-row md:justify-between md:gap-0 mt-5 px-1">
+            <div class="w-full md:w-1/2 flex flex-col gap-2 md:flex-row md:justify-between md:gap-0 mt-5 px-1">
                 <span class="font-extrabold">La palabra tiene {{ `${question.palabra.length} letras` }}</span>
                 <span v-if="answer.length > 0" class="text-sm font-extrabold">{{ answer.length }}</span>
             </div>
