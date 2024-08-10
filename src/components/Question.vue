@@ -10,6 +10,7 @@
                 type="text"
                 v-model="answer"
                 class="w-72 md:w-1/2 h-10 border-2 rounded-md outline-none text-center font-extrabold"
+                :class="{ 'border-red-400': wrongAnswer }"
                 placeholder="Ingresa tu respuesta"
                 required
             />
@@ -37,6 +38,7 @@ const props = defineProps([
 const question = ref({})
 const answer = ref('')
 const prevAnswers = ref([])
+const wrongAnswer = ref(false)
 
 function getQuestion(data) {
 
@@ -58,11 +60,13 @@ function handleSubmit(e) {
     e.preventDefault()
 
     if (answer.value.toLowerCase() == question.value.palabra.toLowerCase()) {
+        wrongAnswer.value = false
         emit('incrementHit')
         getQuestion(data)
     }
     else {
         answer.value = ''
+        wrongAnswer.value = true
         emit('missedAttempt')
     }
 }
