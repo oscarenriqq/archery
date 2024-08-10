@@ -3,7 +3,7 @@
     <header class="mt-10 flex flex-col items-center">
       <img :src="ArcheryLogo" class="w-20 h-20 mx-auto" />
       <h1 class="text-6xl font-extrabold text-center">Super arquero</h1>
-      <p class="mt-3">Demuestra tu puntería respondiendo las preguntas y salva a un inocente civil de morir.</p>
+      <p class="px-5 md:px-0 mt-3">Demuestra tu puntería respondiendo las preguntas y salva a un inocente civil de morir.</p>
     </header>
     <main class="text-center pt-10">
       <div class="flex justify-between">
